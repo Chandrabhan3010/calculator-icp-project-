@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        calculator project
+    </title>
+    <style>
+        @font-face {
+            font-family:Digital ;
+            src: url('digital-7\ \(mono\ italic\).ttf') format('truetype');
+        }
+        .calculator-container{
+        width: 400px;
+        background-color: black;    
+        padding: 20px;
+        border-radius : 10px ;
+        border: black 2px solid;
+        display: block;
+        margin: auto;
+        margin-top: 150px;
+        box-shadow: 10px 10px 10px  grey;
+        }
+        .row{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .btn{
+            height: 60px;
+            width: 80px;
+            font-size: 50px;
+            font-weight: bold;
+            background-color: white;
+            border-radius:8px;
+            border: 2px solid powderblue;
+        }
+        .btn:hover{
+            cursor: pointer;
+            box-shadow: 0px 2px 10px wheat;
+            transition:0.5s ;
+        }
+        .bg-tomato{
+            background-color:tomato;
+            color: white;
+            border: white  2px solid;
+        }
+        .input-screen{
+        width: 100%;
+        height:70px;
+        margin-bottom: 20px;
+        font-size: 70px;
+        border-radius: 10px;
+        background-color: bisque;
+        font-family: digital ;
+        }
+        .input-screen:hover{ 
+        box-shadow: 0px 5px 10px pink ;
+        }
+        .brand{
+            color:white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <span class="brand">CODIANS-RTC</span>
+        <div class="row">
+            <input type="text" id="input" class="input-screen"/>
+        </div> 
+        <div class="row ">
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn bg-tomato">/</button>
+         </div>
+         <div class="row">
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn bg-tomato">*</button>
+         </div>
+         <div class="row">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn bg-tomato">-</button>
+         </div>
+         <div class="row">
+            <button class="btn">0</button>
+            <button class="btn bg-tomato">.</button>
+            <button class="btn bg-tomato">+</button>
+            <button class="btn bg-tomato">=</button>
+         </div>
+    </div>
+</body>
+</html>
