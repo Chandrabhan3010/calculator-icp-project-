@@ -13,7 +13,7 @@
         }
         function calculate() {
             let calText = document.querySelector(".input-screen").value;
-            document.querySelector(".input-screen").value = eval(calText);
+            document.querySelector(".input-screen").value = eval(calText);cd
         }
         function clearscreen() {
             document.querySelector(".input-screen").value = "";
@@ -24,11 +24,14 @@
         }
     
         function on(){
-            document.querySelector(".input-screen").style.background="bisque"; 
+            document.querySelector(".input-screen").style.background="bisque";
         }
-        function off(){
+        function off(btn){
             document.querySelector(".input-screen").style.background="#636361";
             document.querySelector(".input-screen").style.border="1px solid #636361";
+            document.querySelector(".input-screen").value = "";
+            document.getElementsByClassName(btn).disabled = true;
+            alert("Button has been disabled.");
         }   
     </script>
 
@@ -110,34 +113,34 @@
             <input type="text" id="input" class="input-screen" />
         </div>
         <div class="row ">
-            <button class="btn" onclick="clearscreen()">AC</button>
-            <button class="btn" onclick="off()">Off</button>
-            <button class="btn" onclick="on()">ON</button>
-            <button class="btn" onclick="del()">DEL</button>
+            <button id="bt" class="btn" onclick="clearscreen()">AC</button>
+            <button id="bt" class="btn" onclick="off()">Off</button>
+            <button id="bt" class="btn" onclick="on()">ON</button>
+            <button id="bt" class="btn" onclick="del()">DEL</button>
         </div>
         <div class="row ">
-            <button class="btn" onclick="pressButton(7)">7</button>
-            <button class="btn" onclick="pressButton(8)">8</button>
-            <button class="btn" onclick="pressButton(9)">9</button>
-            <button class="btn bg-tomato" onclick="pressButton('/')">/</button>
+            <button id="bt" class="btn" onclick="pressButton(7)">7</button>
+            <button id="bt" class="btn" onclick="pressButton(8)">8</button>
+            <button id="bt" class="btn" onclick="pressButton(9)">9</button>
+            <button id="bt" class="btn bg-tomato" onclick="pressButton('/')">/</button>
         </div>
         <div class="row">
-            <button class="btn" onclick="pressButton(4)">4</button>
-            <button class="btn" onclick="pressButton(5)">5</button>
+            <button id="bt" class="btn" onclick="pressButton(4)">4</button>
+            <button id="bt" class="btn" onclick="pressButton(5)">5</button>
             <button class="btn" onclick="pressButton(6)">6</button>
             <button class="btn bg-tomato" onclick="pressButton('*')">*</button>
         </div>
         <div class="row">
-            <button class="btn" onclick="pressButton(1)">1</button>
-            <button class="btn" onclick="pressButton(2)">2</button>
-            <button class="btn" onclick="pressButton(3)">3</button>
-            <button class="btn bg-tomato" onclick="pressButton('-')">-</button>
+            <button id="bt" id="bt" class="btn" onclick="pressButton(1)">1</button>
+            <button id="bt" class="btn" onclick="pressButton(2)">2</button>
+            <button id="bt" class="btn" onclick="pressButton(3)">3</button>
+            <button id="bt" class="btn bg-tomato" onclick="pressButton('-')">-</button>
         </div>
         <div class="row">
-            <button class="btn" onclick="pressButton(7)">0</button>
-            <button class="btn bg-tomato" onclick="pressButton('.')">.</button>
-            <button class="btn bg-tomato" onclick="pressButton('+')">+</button>
-            <button class="btn bg-tomato" onclick="calculate()">=</button>
+            <button id="bt" class="btn" onclick="pressButton(7)">0</button>
+            <button id="bt" class="btn bg-tomato" onclick="pressButton('.')">.</button>
+            <button id="bt" class="btn bg-tomato" onclick="pressButton('+')">+</button>
+            <button id="bt" class="btn bg-tomato" onclick="calculate()">=</button>
         </div>
     </div>
     <div>
