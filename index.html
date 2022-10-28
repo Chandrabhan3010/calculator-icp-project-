@@ -19,9 +19,10 @@
             document.querySelector(".input-screen").value = "";
         }
         function del() {
-            let calText = document.querySelector(".input-screen").innerText;
-            document.querySelector(".input-screen").value= -1 ;
+           let calText = document.querySelector(".input-screen").value ;
+           document.querySelector(".input-screen").value = calText.substring(0,calText.length-1);
         }
+    
         function on(){
             document.querySelector(".input-screen").style.background="bisque"; 
         }
